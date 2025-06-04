@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  meds-tracker:
+    build: .
+    container_name: meds-tracker
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - ./prisma/data:/app/prisma/data  # 👈 Persist SQLite DB
+    environment:
+      - DATABASE_URL=file:./data/dev.db
