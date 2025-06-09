@@ -30,7 +30,7 @@ export default function MedsTableHead() {
                     scope="col"
                     className="px-6 py-3 text-start text-xs font-medium bg-linear-to-b from-fuchsia-700 to-pink-500 bg-clip-text text-transparent uppercase"
                 >
-                    Restock due
+                    Runs out
                 </th>
             </tr>
         </thead>

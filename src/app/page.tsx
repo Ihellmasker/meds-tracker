@@ -9,7 +9,7 @@ export default function Home() {
                     Meds & Supplements Tracker
                 </h1>
                 {MEDICATION_DATA.map((personData, i) => (
-                    <PersonSection key={i} data={personData} />
+                    <PersonSection key={i} person={personData} />
                 ))}
             </main>
         </div>

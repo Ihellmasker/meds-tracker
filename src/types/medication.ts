@@ -1,13 +1,15 @@
+export interface IUsage {
+    morning?: number;
+    lunch?: number;
+    evening?: number;
+}
+
 export interface IMedication {
     id: string;
     name: string;
     packSize: number;
     type: "Medication" | "Supplement";
-    usage: {
-        morning?: number;
-        lunch?: number;
-        evening?: number;
-    };
+    usage: IUsage;
     lastUpdateState?: {
         currentPack: number;
         packsRemaining: number;
@@ -17,6 +19,6 @@ export interface IMedication {
 
 export interface IPerson {
     id: string;
-    personName: string;
-    items: IMedication[];
+    name: string;
+    medications: IMedication[];
 }
